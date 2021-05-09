@@ -14,14 +14,14 @@ from datetime import datetime
 
 
 #Calculamos los Retornos Diarios USD ARS
-retornos_USDARS= []
+
 
 def dailyReturn(dailyDataUSDARS):
     for i in range (1, len (dailyDataUSDARS)):
         retornos_USDARS.append (dailyDataUSDARS['Adj Close'][i]/ dailyDataUSDARS['Adj Close'] [i-1]-1)
     print ('El retorno diario de USD ARS es=', retornos_USDARS)
 
-
+retornos_USDARS= []
 wkDict = {"lunes":"Monday","martes":"Tuesday","miércoles":"Wednesday","jueves":"Thursday","viernes":"Friday","sabado":"Saturday","domingo":"Sunday"}
 
 def weekdayName(x: int,y: dict):
