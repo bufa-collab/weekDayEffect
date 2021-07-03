@@ -35,7 +35,7 @@ def weekdayName(x: int,y: dict):
 if __name__ == "__main__":
     inicio= '2019-01-01' #Fecha Inicial
     fin= '2020-01-01' #Fecha Final
-    dailyDataUSDARS= web.get_data_yahoo('ARS=X', inicio, fin, interval='d')
+    dailyDataUSDARS= pd.read_excel("Datos históricos .xlsx")
     weekdayFunc = lambda x : x.strftime('%A')
     dayName = [weekdayName(weekdayFunc(x),wkDict) for x in dailyDataUSDARS.index]
     dailyDataUSDARS['dayName'] = dayName
